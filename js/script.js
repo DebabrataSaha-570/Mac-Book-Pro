@@ -82,6 +82,11 @@ document.getElementById('512GB-ssd').addEventListener('click', function () {
     setPrice('storage', true, 100)
 })
 
+document.getElementById('1TB-ssd').addEventListener('click', function () {
+
+    setPrice('storage', true, 180)
+})
+
 
 //................... delivery buttons event handler............... 
 
