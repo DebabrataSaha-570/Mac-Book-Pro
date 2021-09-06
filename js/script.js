@@ -1,3 +1,5 @@
+// ............set price function.............. 
+
 function setPrice(product, isIncreasing, number) {
     const productCost = document.getElementById(product + '-cost')
 
@@ -10,12 +12,14 @@ function setPrice(product, isIncreasing, number) {
     calculateTotal();
 
 }
+// .............get input value function........... 
 
 function getInputValue(product) {
     const productInput = document.getElementById(product + '-cost');
     const productInputNumber = parseFloat(productInput.innerText);
     return productInputNumber;
 }
+// ............calculateTotal function...........
 
 function calculateTotal(code) {
     const bestPrice = getInputValue('minimum');
@@ -33,6 +37,8 @@ function calculateTotal(code) {
     const finalTotalPrice = document.getElementById('final-total');
     finalTotalPrice.innerText = sumOfAllCost;
 
+    // handling coupon code 
+
     if (code.toLowerCase() == 'stevekaku') {
         const twentyPercent = sumOfAllCost * 0.2;
         finalTotalPrice.innerText = sumOfAllCost - twentyPercent;
@@ -44,11 +50,14 @@ function calculateTotal(code) {
 
 
 }
+//.................. apply button event handler..................
 
 document.getElementById('apply-button').addEventListener('click', function () {
     const couponCode = document.getElementById('freeOf-cost').value;
     calculateTotal(couponCode)
 })
+
+//...................  memory buttons event handlers...........
 
 document.getElementById('8GB-memory').addEventListener('click', function () {
     setPrice('memory', false, 0)
@@ -61,13 +70,20 @@ document.getElementById('16GB-memory').addEventListener('click', function () {
 
 })
 
+// ................. ssd buttons event handlers................
+
 document.getElementById('256GB-ssd').addEventListener('click', function () {
     setPrice('storage', false, 0)
 })
+
+
 document.getElementById('512GB-ssd').addEventListener('click', function () {
 
     setPrice('storage', true, 100)
 })
+
+
+//................... delivery buttons event handler............... 
 
 document.getElementById('free-delivery').addEventListener('click', function () {
     setPrice('delivery', false, 0)
