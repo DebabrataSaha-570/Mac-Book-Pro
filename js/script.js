@@ -17,20 +17,38 @@ function getInputValue(product) {
     return productInputNumber;
 }
 
-function calculateTotal() {
+function calculateTotal(code) {
     const bestPrice = getInputValue('minimum');
     const extraMemoryCost = getInputValue('memory')
     const extraStorageCost = getInputValue('storage');
     const deliveryCharge = getInputValue('delivery');
+    const sumOfAllCost = bestPrice + extraMemoryCost + extraStorageCost + deliveryCharge;
+
+
 
     const totalPrice = document.getElementById('total-price');
-    totalPrice.innerText = bestPrice + extraMemoryCost + extraStorageCost + deliveryCharge;
+    totalPrice.innerText = sumOfAllCost;
+
 
     const finalTotalPrice = document.getElementById('final-total');
-    finalTotalPrice.innerText = bestPrice + extraMemoryCost + extraStorageCost + deliveryCharge;
+    finalTotalPrice.innerText = sumOfAllCost;
+
+    if (code.toLowerCase() == 'stevekaku') {
+        const twentyPercent = sumOfAllCost * 0.2;
+        finalTotalPrice.innerText = sumOfAllCost - twentyPercent;
+
+    }
+    else {
+        alert('Invalid Coupon code')
+    }
+
 
 }
 
+document.getElementById('apply-button').addEventListener('click', function () {
+    const couponCode = document.getElementById('freeOf-cost').value;
+    calculateTotal(couponCode)
+})
 
 document.getElementById('8GB-memory').addEventListener('click', function () {
     setPrice('memory', false, 0)
