@@ -35,22 +35,33 @@
 
                     <article class="memory-section my-5">
                         <h5>Memory</h5>
-                        <button type="button" class="btn btn-light border border-secondary ">8GB unified
+                        <button class="btn btn-outline-secondary" id="8GB-memory" type="button">8GB unified
                             Memory</button>
-                        <button type="button" class="btn btn-light border border-secondary">16GB unified Memory</button>
+
+                        <button class="btn btn-outline-secondary" id="16GB-memory" type="button">16GB unified
+                            Memory</button>
                     </article>
 
                     <article class="storage-section mb-5">
                         <h5>Storage</h5>
-                        <button type="button" class="btn btn-light border border-secondary">256GB SSD storage</button>
-                        <button type="button" class="btn btn-light border border-secondary">512GB SSD storage</button>
+
+                        <button class="btn btn-outline-secondary" type="button" id="256GB-ssd">256GB SSD
+                            storage</button>
+
+                        <button class="btn btn-outline-secondary" type="button" id="512GB-ssd">512GB SSD
+                            storage</button>
+
                     </article>
 
                     <article class="storage-section mb-5">
                         <h5>Choose your delivery option</h5>
-                        <button type="button" class="btn btn-light border border-secondary">Friday, Aug 25 FREE Prime
+
+                        <button class="btn btn-outline-secondary" type="button" id="free-delivery">Friday, Aug 25 FREE
+                            Prime
                             Delivery</button>
-                        <button type="button" class="btn btn-light border border-secondary">Friday, Aug 21 Delivery
+
+                        <button class="btn btn-outline-secondary" type="button" id="paid-delivery">Friday, Aug 21
+                            Delivery
                             Charge
                             $20</button>
                     </article>
@@ -59,32 +70,51 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
+
+                                    <th>Best Price</th>
+                                    <th>$1299</th>
+
+                                </tr>
+                                <tr>
+
+                                    <td class="fw-bold">Extra Memory Cost</td>
+                                    <td class="fw-bold">$<span id="memory-cost">0</span></td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td class="fw-bold">Extra Storage Cost</td>
+                                    <td class="fw-bold">$<span id="storage-cost">0</span></td>
+
+                                </tr>
+                                <tr>
+
+                                    <td class="fw-bold">Delivery Charge</td>
+                                    <td class="fw-bold">$<span id="delivery-cost">0</span></td>
                                 </tr>
                             </thead>
                             <tbody>
+
+
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td colspan="2">Larry the Bird</td>
-                                    <td>@twitter</td>
+
+                                    <td class="fw-bold">Total Price</td>
+                                    <td class="fw-bold">$<span>1299</span></td>
                                 </tr>
                             </tbody>
                         </table>
+                    </article>
+
+                    <article class="promo-code-section w-50 mt-3">
+                        <p>Add promo code</p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" aria-label="Recipient's username"
+                                aria-describedby="button-addon2">
+                            <!-- <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button> -->
+
+                            <button type="button" class="btn btn-danger">Apply</button>
+                        </div>
                     </article>
 
                 </div>
@@ -94,7 +124,10 @@
             </div>
         </section>
     </main>
-
+    <footer>
+        <hr>
+        <h2 class="text-center">Total: $<span>1219</span></h2>
+    </footer>
 
 
 
